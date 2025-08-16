@@ -1,0 +1,334 @@
+.editplayer-container {
+  margin: 2rem auto;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.editplayer-header {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.editplayer-back-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.editplayer-back-btn:hover {
+  color: #ffffff;
+}
+
+.editplayer-back-btn svg {
+  margin-right: 5px;
+}
+
+.editplayer-title {
+  font-size: 2rem;
+  color: #004e92;
+  font-weight: bold;
+  margin: 0;
+}
+
+.editplayer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.editplayer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.editplayer-col {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.editplayer-col label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.editplayer-col input,
+.editplayer-col select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.editplayer-col input:focus,
+.editplayer-col select:focus {
+  border-color: #007bff;
+}
+
+.editplayer-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editplayer-img-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+}
+
+.editplayer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.editplayer-img-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.editplayer-img-overlay.visible {
+  display: flex;
+}
+
+.editplayer-img-add,
+.editplayer-img-edit,
+.editplayer-img-delete {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.editplayer-img-add:hover {
+  background-color: blue;
+  color: white;
+}
+
+.editplayer-img-edit:hover {
+  background-color: green;
+  color: white;
+}
+
+.editplayer-img-delete:hover {
+  background-color: red;
+  color: white;
+}
+
+.editplayer-btn-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.editplayer-btn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.editplayer-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.editplayer-col .react-tel-input .form-control {
+  width: 100% !important;
+  height: 42px !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+  padding-left: 48px !important; 
+}
+
+
+.editplayer-col .react-tel-input .form-control:focus {
+  border-color: #004e92 !important;
+  box-shadow: none !important;
+}
+
+.editplayer-col .react-tel-input .flag-dropdown {
+  border-top-left-radius: 8px!important;
+  border-bottom-left-radius: 8px!important;
+  border: 1px solid #ccc!important;
+  border-right: none!important;
+  background: white!important;
+}
+
+.editplayer-col .react-tel-input .flag-dropdown.open {
+  border-color: #007bff !important;
+}
+
+.editplayer-col .react-tel-input .selected-flag {
+  padding: 0 8px;
+  height: 60%;
+}
+
+.editplayer-col .react-tel-input .flag {
+  margin-top: 2px;
+}
+
+
+/*-------------------------------responsive------------------------------*/
+@media (max-width: 1440px) {
+  .editplayer-container {
+    padding: 1.25rem;
+    width: 92%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .editplayer-container {
+    padding: 0.75rem;
+    width: 95%;
+  }
+  .editplayer-row {
+    gap: 20px;
+  }
+
+  .editplayer-title {
+    font-size: 1.8rem;
+  }
+
+  .editplayer-col input,
+  .editplayer-col select {
+    font-size: 13px;
+  }
+
+  .editplayer-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+/* Breakpoint: 768px */
+@media (max-width: 768px) {
+  .editplayer-container {
+    padding: 0.75rem;
+    width: 95%;
+  }
+  .editplayer-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .editplayer-col {
+    min-width: 100%;
+  }
+
+  .editplayer-img-wrapper {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .editplayer-title {
+    font-size: 1.3rem;
+  }
+
+  .editplayer-submit {
+    width: 30%;
+  }
+
+  .editplayer-back-btn{
+    font-size: 13px;
+    padding: 6px 10px;
+    margin-right: 9px;
+    border-radius: 6px;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editplayer-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+  .editplayer-title {
+    font-size: 1.5rem;
+  }
+
+  .editplayer-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .editplayer-back-btn{
+    font-size: 12px;
+    padding: 4px 7px;
+    margin-right: 6px;
+    border-radius: 4px;
+    align-items: center;
+    gap: 3px;
+  }
+  .editplayer-back-btn{
+    font-size: 10px;
+  }
+
+   .editplayer-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .editplayer-container{
+    padding: 0.5rem;
+    width: 90%;
+  }
+  .editplayer-title {
+    font-size: 1.1rem;
+  }
+
+  .editplayer-btn {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .editplayer-back-btn {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .editplayer-img-container {
+    width: 70px;
+    height: 70px;
+  }
+}

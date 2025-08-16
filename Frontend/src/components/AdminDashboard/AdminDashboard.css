@@ -1,0 +1,323 @@
+.admin-dashboard {
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  min-height: 100vh;
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Titles === */
+.admin-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #10b981; /* emerald green */
+  text-align: center;
+  margin-bottom: 0.25rem;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 5px rgba(16, 185, 129, 0.7);
+}
+
+.admin-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #9ca3af; /* gray-400 */
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+/* === Table Container === */
+.table-container {
+  width: 100%;
+  max-width: 1100px;
+  background: #111827;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+  padding: 2rem 1.5rem;
+  overflow-x: auto;
+  border: 1px solid #22c55e; /* lighter green border */
+}
+
+/* === User Table === */
+.user-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  min-width: 900px;
+  font-size: 1rem;
+  color: #d1d5db; /* gray-300 */
+}
+
+/* Search bar container */
+.search-container {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 1.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 12px 3px rgba(118, 75, 162, 0.8);
+  background-color: #fff;
+}
+
+/* Table Headers */
+.user-table th {
+  background-color: #065f46; /* dark green */
+  color: #d1fae5; /* light green */
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  letter-spacing: 1px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Table Rows */
+.user-table tbody tr {
+  background: #1f2937; /* slate gray */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transition: transform 0.15s ease-in-out;
+}
+
+.user-table tbody tr:hover {
+  background: #22c55e; /* bright green */
+  color: #111827;
+  transform: scale(1.02);
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.6);
+}
+
+/* Table Cells */
+.user-table td {
+  padding: 14px 20px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* Current Plan Styling */
+.current-plan {
+  font-weight: 700;
+  color: #22c55e; /* bright green */
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+}
+
+/* === Plan Select Styling === */
+.plan-select {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #22c55e; /* bright green */
+  color: #111827; /* dark text */
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 140px;
+  box-shadow: 0 3px 10px rgba(34, 197, 94, 0.5);
+}
+
+.plan-select:hover,
+.plan-select:focus {
+  background-color: #16a34a;
+  box-shadow: 0 5px 15px rgba(22, 163, 74, 0.7);
+  outline: none;
+}
+
+/* Scrollbar for Table Container (optional, for better UX on overflow) */
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #22c55e;
+  border-radius: 10px;
+}
+
+/* Spinner container to center spinner */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* adjust height to your preference */
+}
+
+/* Spinner */
+.spinner-admin-dashboard {
+  margin: 0 auto;
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #10b981; /* Emerald green */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ------------------------------------------------------Responsive--------------------------------------------- */
+@media (max-width: 1440px) {
+  .admin-dashboard {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .table-container {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .admin-dashboard {
+    padding: 2rem 1rem;
+  }
+
+  .search-input {
+    max-width: 70%;
+    font-size: 0.95rem;
+  }
+
+  .table-container {
+    width: 95%;
+    padding: 1.25rem 1rem;
+    box-shadow: none;
+    border-radius: 12px;
+  }
+
+  .user-table {
+    font-size: 0.95rem;
+    min-width: unset;
+  }
+
+  .plan-select {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-title {
+    font-size: 2.2rem;
+  }
+
+  .admin-subtitle {
+    font-size: 1rem;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .table-container {
+    padding: 1rem;
+  }
+
+  .user-table th, .user-table td {
+    padding: 10px 14px;
+  }
+
+  .plan-select {
+    font-size: 0.85rem;
+    min-width: 110px;
+  }
+}
+
+/* =================== Responsive: ≤480px =================== */
+@media (max-width: 480px) {
+  .admin-title {
+    font-size: 1.8rem;
+  }
+
+  .admin-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .search-container {
+    padding: 0 0.5rem;
+  }
+
+  .search-input {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    border-radius: 40px;
+  }
+
+  .table-container {
+    padding: 0.75rem;
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+
+  .user-table {
+    width: 100%;
+    font-size: 0.85rem;
+    min-width: 600px;
+  }
+
+  .plan-select {
+    min-width: 100px;
+    font-size: 0.8rem;
+  }
+}
+
+/* =================== Responsive: ≤320px =================== */
+@media (max-width: 320px) {
+  .admin-title {
+    font-size: 1.5rem;
+  }
+
+  .admin-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .search-input {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .table-container {
+    padding: 0.5rem;
+  }
+
+  .plan-select {
+    font-size: 0.75rem;
+    min-width: 90px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 8px 10px;
+  }
+}

@@ -1,0 +1,300 @@
+.login-signup-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: fff;
+}
+
+.form-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  font-size: 1.8rem;
+  color: #004e92;
+  font-weight: bold;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; 
+}
+
+.form-toggle button {
+  flex: 1;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #004e92;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  background-image: linear-gradient(to right, #004e92, #000428);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  z-index: 1;
+}
+
+.form-toggle button::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, #004e92, #000428);
+  border-radius: 30px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.form-toggle button.active,
+.form-toggle button:hover {
+  background-size: 100% 100%;
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 0 12px rgba(0, 78, 146, 0.4);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
+  width: 95%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #004e92;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(to right, #004e92, #000428);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(to right, #003c72, #00021f);
+}
+
+.form-links {
+  text-align: right;
+  margin-top: 4px;
+}
+
+.form-links a {
+  font-size: 0.85rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-footer p {
+  font-size: 0.95rem;
+  color: #555;
+}
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+/* NEW: Password wrapper for eye icon */
+.password-wrapper {
+  position: relative;
+  width: 95%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.password-wrapper input:focus {
+  border-color: #004e92;
+}
+
+.password-wrapper span {
+  position: absolute;
+  top: 55%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.resend-btn {
+  margin-top: 10px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.resend-btn:disabled {
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.phone-input-container {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.phone-input-container .react-tel-input {
+  width: 100%;
+}
+
+.phone-input-container .form-control {
+  width: 101% !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+  border: 1px solid #ccc !important;
+  padding-left: 48px !important; 
+}
+
+.phone-input-container .form-control:focus {
+  border-color: #004e92 !important;
+  box-shadow: none !important;
+}
+
+.phone-input-container .flag-dropdown {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border: 1px solid #ccc;
+  border-right: none;
+  background: white;
+}
+
+/*---------------------------------responsive------------------------------------*/
+
+@media (max-width: 768px) {
+  .form-card {
+    max-width: 350px;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .form-toggle {
+    align-items: center;
+  }
+
+  .form-toggle button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  .password-wrapper span {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-card {
+    max-width: 250px;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  input[type="tel"] {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .password-wrapper input {
+    font-size: 0.85rem; 
+  }
+
+  .password-wrapper span {
+    font-size: 1rem;
+  }
+
+  .form-links {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .form-links a {
+    font-size: 0.8rem;
+  }
+.react-tel-input .flag-dropdown {
+  height: auto !important;
+}
+}
+
+@media (max-width: 375px) {
+  .form-card {
+    padding: 0.8rem;
+  }
+
+  .form-toggle button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .submit-btn {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .password-wrapper input {
+    font-size: 0.85rem;
+  }
+
+  .password-wrapper span {
+    font-size: 0.9rem;
+    right: 8px;
+  }
+}

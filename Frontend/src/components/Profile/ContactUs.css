@@ -1,0 +1,241 @@
+.contactus-outer-container {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+}
+
+.contactus-header-container {
+  text-align: center;
+}
+
+.contactus-title {
+  font-size: 2rem;
+  color: #004e92;
+  font-weight: bold;
+}
+
+.middle-line {
+  border-bottom: 2px solid #004e92;
+  width: 60px;
+  margin: 10px auto 30px;
+}
+
+.contactus-form-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contactus-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Row and column layout */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-column-small {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-column-small input,
+.form-column-small textarea {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.form-column input,
+.form-column textarea {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Captcha Section */
+.captcha-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactus-captcha-box {
+  font-family: monospace;
+  background-color: #eaeaea;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.contactus-captcha-reload {
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  background-color: #eaeaea;
+}
+
+/* Submit button */
+.contactus-submit-button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  width: 30%;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+.contactus-submit-button:hover {
+  background-color: #084cdf;
+}
+
+/* Validation message */
+.validation-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Phone input */
+.react-tel-input {
+  width: 100% !important;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  height: 42px !important;
+  font-size: 1rem !important;
+  border-radius: 6px !important;
+  padding-left: 48px !important;
+  box-sizing: border-box;
+}
+
+.react-tel-input .flag-dropdown {
+  border: 1px solid #ccc !important;
+  border-right: none !important;
+  border-radius: 6px 0 0 6px !important;
+  background-color: #fff !important;
+  height: 42px !important;
+}
+
+/*--------------------------------------responsive--------------------------------*/
+
+@media (max-width: 1440px) {
+  .contactus-outer-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+@media (max-width: 1024px) {
+  .contactus-outer-container {
+    padding: 1.5rem;
+    width: 92%;
+  }
+
+  .form-column,
+  .form-column-small {
+    flex: 1 1 48%;
+  }
+
+  .contactus-submit-button {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactus-outer-container {
+    padding: 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-column,
+  .form-column-small {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .form-column-small input,
+  .form-column-small textarea {
+    width: 100%;
+  }
+
+  .contactus-submit-button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactus-outer-container {
+    padding: 0.75rem;
+  }
+
+  .contactus-title {
+    font-size: 1.5rem;
+  }
+
+  .contactus-captcha-box {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .contactus-captcha-reload {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .form-column input,
+  .form-column textarea,
+  .form-column-small input {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .react-tel-input .form-control {
+    font-size: 0.95rem !important;
+    height: 40px !important;
+  }
+
+  .contactus-submit-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+}

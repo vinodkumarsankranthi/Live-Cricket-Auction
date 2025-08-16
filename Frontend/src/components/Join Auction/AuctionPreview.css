@@ -1,0 +1,754 @@
+.auction-preview-container {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+}
+
+.auction-preview-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.auction-preview-back-btn {
+  background-color: #fff;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.auction-preview-back-btn:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+.auction-preview-card {
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at center, #1a1a2e, #16213e);
+  border-radius: 20px;
+  padding: 20px;
+  gap: 40px;
+  width: 97%;
+  height: 450px;
+  position: relative;
+}
+
+.auction-preview-serial {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background-color: orange;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auction-preview-image-wrapper {
+  width: 350px;
+  height: 350px;
+  flex-shrink: 0;
+}
+
+.auction-preview-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid orange;
+  object-fit: cover;
+}
+
+.auction-preview-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  color: white;
+  width: 50%;
+  margin-top: 25px;
+}
+
+.auction-preview-name,
+.auction-preview-role {
+  border: 2px solid orange;
+  border-radius: 40px 0px 40px 0px;
+  padding: 10px 20px;
+  font-size: 28px;
+  font-weight: bold;
+  background: transparent;
+  color: orange;
+  max-width: 100%;
+}
+.auction-preview-auction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid orange;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: radial-gradient(circle at center, #1a1a2e, #16213e);
+  color: rgb(255, 255, 255);
+  width: 97%;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 7px;
+}
+
+.auction-preview-auction h3,
+.auction-preview-auction h5 {
+  margin: 0; 
+  padding: 0; 
+}
+.auction-preview-auction h3{
+  color: orange;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 60%;
+}
+
+.auction-preview-info h2 {
+  color: orange;
+  margin: 0;
+}
+
+.auction-preview-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.auction-preview-buttons button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.auction-preview-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #000000;
+}
+
+.auction-preview-nav-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.auction-preview-nav-buttons button {
+  padding: 12px 24px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sold-status {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.unsold-status {
+  color: red;
+  font-weight: bold;
+}
+  .status-pre-stamp1 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 260px;
+    width: 310px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .status-pre-stamp2 {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    height: 270px;
+    width: 270px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  @keyframes stampShot {
+    0% {
+      transform: rotate(-30deg) scale(0.2);
+      opacity: 0;
+    }
+    50% {
+      transform: rotate(5deg) scale(1.1);
+      opacity: 1;
+    }
+    70% {
+      transform: rotate(-2deg) scale(0.95);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+
+.auction-preview-filter {
+  padding: 8px 0px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #007BFF;
+  background-color: #fff;
+  font-weight: bold;
+  color: #007BFF;
+  text-align: center;
+  margin-top: 8px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.auction-preview-filter:focus {
+  outline: none;
+}
+.auction-preview-counts {
+  font-weight: 1000;
+  color: #333;
+  display: flex;
+  gap: 40px;
+}
+
+.auction-preview-counts h4 {
+  margin: 0px;
+  display: flex;
+  color: #ffffff;
+  margin-top: 25px;
+  width: auto;
+}
+/*-----------------------------------------------responsive---------------------------------------*/
+/* 1440px */
+@media (max-width: 1440px) {
+  .auction-preview-container {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+  .auction-preview-card {
+    height: 420px;
+    gap: 30px;
+  }
+  .auction-preview-image-wrapper {
+    width: 320px;
+    height: 320px;
+  }
+  .auction-preview-serial {
+    width: 45px;
+    height: 45px;
+    font-size: 28px;
+    top: 35px;
+    left: 35px;
+  }
+  .auction-preview-name,
+  .auction-preview-role {
+    font-size: 26px;
+  }
+  .auction-preview-auction h3 {
+    font-size: 22px;
+    max-width: 60%;
+  }
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .auction-preview-container {
+    padding: 1.25rem;
+    max-width: 92%;
+  }
+  .auction-preview-card {
+    height: 420px;
+    gap: 25px;
+  }
+  .auction-preview-image-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+  .auction-preview-serial {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    top: 30px;
+    left: 30px;
+  }
+  .auction-preview-name,
+  .auction-preview-role {
+    font-size: 24px;
+  }
+  .auction-preview-auction {
+    flex-direction: column;
+    font-size: 18px;
+    gap: 6px;
+    padding: 10px;
+    width: 99%;
+  }
+  .auction-preview-auction h3 {
+    max-width: 100%;
+    font-size: 20px;
+  }
+  .auction-preview-filter {
+    width: 60%;
+  }
+ .auction-preview-counts{
+   max-width: 100%;
+   font-size: 14px;
+ }
+  .status-pre-stamp1 {
+    position: absolute;
+    bottom: 10px;
+    right: 3px;
+    height: 190px;
+    width: 230px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .status-pre-stamp2 {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    height: 200px;
+    width: 200px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .auction-preview-card {
+    height: 350px;
+    gap: 15px;
+    width: 96%;
+  }
+  .auction-preview-image-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+  .auction-preview-serial {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    top: 30px;
+    left: 30px;
+  }
+  .auction-preview-name,
+  .auction-preview-role {
+    font-size: 22px;
+  }
+  .auction-preview-auction {
+    flex-direction: column;
+    font-size: 18px;
+    gap: 6px;
+    padding: 10px;
+    width: 99%;
+  }
+  .auction-preview-auction h3 {
+    max-width: 100%;
+    font-size: 20px;
+  }
+  .auction-preview-filter {
+    width: 60%;
+  }
+ .auction-preview-counts{
+   max-width: 100%;
+   font-size: 12px;
+ }
+ .auction-preview-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  width: 45%;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.auction-preview-name,
+.auction-preview-role {
+  border: 2px solid orange;
+  border-radius: 40px 0px 40px 0px;
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  background: transparent;
+  color: orange;
+  max-width: 100%;
+} 
+ .status-pre-stamp1 {
+    position: absolute;
+    bottom: 60px;
+    right: 3px;
+    height: 140px;
+    width: 180px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .status-pre-stamp2 {
+    position: absolute;
+    bottom: 60px;
+    right: 5px;
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+.auction-preview-buttons {
+  gap: 10px;
+}
+
+.auction-preview-buttons button {
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+.auction-preview-nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.auction-preview-nav-buttons button {
+  flex: 0 1 calc(33.33% - 20px); 
+  box-sizing: border-box;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+}
+
+@media (max-width: 630px) {
+  .auction-preview-container {
+    padding: 0.75rem;
+    max-width: 95%;
+  }
+  .auction-preview-card {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    padding: 15px;
+  }
+  .auction-preview-image-wrapper {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .auction-preview-serial {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .auction-preview-name,
+  .auction-preview-role {
+    font-size: 18px;
+    max-width: 100%;
+  }
+  .auction-preview-auction {
+    font-size: 15px;
+    gap: 4px;
+    padding: 8px;
+    flex-wrap: wrap;
+    width: 98%;
+  }
+  .auction-preview-auction h3 {
+    font-size: 18px;
+  }
+  .auction-preview-filter {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+ .auction-preview-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  width: 90%;
+  margin-top: 50px;
+  font-size: 12px;
+}
+.auction-preview-nav-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+}
+
+@media (max-width: 480px) {
+  .auction-preview-container {
+    padding: 0.5rem;
+    max-width: 95%;
+  }
+  .auction-preview-card {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+  }
+    .auction-preview-auction {
+    font-size: 15px;
+    gap: 4px;
+    padding: 8px;
+    flex-wrap: wrap;
+    width: 96%;
+  }
+  .auction-preview-image-wrapper {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+  .auction-preview-serial {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    top: 15px;
+    left: 15px;
+  }
+  .auction-preview-name,
+  .auction-preview-role {
+    font-size: 18px;
+  }
+  .auction-preview-auction h3 {
+    font-size: 16px;
+  }
+  .auction-preview-filter {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .auction-preview-buttons button {
+    margin-top: 0px;
+  }
+.auction-preview-counts {
+   flex-direction: column;
+  font-weight: 400;
+  color: #333;
+  display: flex;
+  gap: 1px;
+}
+
+.auction-preview-counts h4 {
+  margin: 2px;
+  display: flex;
+  color: #ffffff;
+}
+ .status-pre-stamp1 {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    height: 140px;
+    width: 180px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .status-pre-stamp2 {
+    position: absolute;
+    bottom: 00px;
+    right: 2px;
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+  .auction-preview-nav-buttons button {
+  padding: 3px 18px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+}
+
+@media (max-width: 376px) {
+  .auction-preview-container {
+    padding: 0.5rem;
+    max-width: 95%;
+  }
+    .auction-preview-card {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    width: 94%;
+  }
+    .auction-preview-auction {
+    font-size: 15px;
+    gap: 4px;
+    padding: 8px;
+    flex-wrap: wrap;
+    width: 94%;
+  }
+  .auction-preview-image-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+  .auction-preview-serial {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    top: 12px;
+    left: 12px;
+  }
+  .auction-preview-name,
+  .auction-preview-role {
+    font-size: 14px;
+  }
+  .auction-preview-auction h3 {
+    font-size: 12px;
+  }
+  .auction-preview-filter {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  .auction-preview-buttons button {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+   .status-pre-stamp1 {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    height: 110px;
+    width: 150px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .status-pre-stamp2 {
+    position: absolute;
+    bottom: 00px;
+    right: 2px;
+    height: 120px;
+    width: 120px;
+    opacity: 0;
+    transform: rotate(-20deg) scale(0);
+    animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+    pointer-events: none;
+    z-index: 5;
+  }
+.auction-preview-nav-buttons button {
+  padding: 3px 18px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+}
+
+@media (max-width: 320px) {
+  .auction-preview-container {
+    padding: 0.25rem;
+    max-width: 95%;
+  }
+  .auction-preview-card {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    width: 92%;
+  }
+    .auction-preview-auction {
+    font-size: 15px;
+    gap: 4px;
+    padding: 8px;
+    flex-wrap: wrap;
+    width: 92%;
+  }
+  .auction-preview-image-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+  .auction-preview-serial {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    top: 10px;
+    left: 10px;
+  }
+  .auction-preview-name,
+  .auction-preview-role {
+    font-size: 14px;
+  }
+  .auction-preview-auction h3 {
+    font-size: 12px;
+  }
+  .auction-preview-filter {
+    width: 100%;
+    margin-left: 0;
+  }
+  .auction-preview-buttons button {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .auction-preview-counts h4 {
+    font-size: 12px;
+  }
+}

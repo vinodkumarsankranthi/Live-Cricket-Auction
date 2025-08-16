@@ -1,0 +1,197 @@
+.dashboard-container {
+  margin: 2rem auto;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.dashboard-header {
+  position: relative;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  color: #004e92;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dashboard-back-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.dashboard-back-button:hover {
+  color: #ffffff;
+}
+
+.dashboard-back-button svg {
+  margin-right: 5px;
+}
+
+.dashboard-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #f0f4ff, #ffffff); 
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 220px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 2px 2px 2px 1px #a9a2a2;
+  transition: all 0.3s ease;
+  border: 1px solid gray;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px) scale(1);
+  background: linear-gradient(145deg, #e0f7fa, #ffffff);
+  border-color: #007BFF;
+  box-shadow: 2px 2px 2px 1px #ffffff;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.dashboard-card:hover {
+  animation: pulse 1s;
+}
+
+.dashboard-card-icon {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-card div {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+/*------------------------------responsive---------------------------*/
+
+@media (max-width: 1440px) {
+  .dashboard-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+@media (max-width: 1024px) {
+  .dashboard-container {
+    padding: 1.25rem;
+    width: 92%;
+  }
+
+  .dashboard-card {
+    width: 30%;
+    padding: 1.05rem;
+  }
+
+  .dashboard-card-icon {
+    font-size: 2.2rem;
+  }
+
+  .dashboard-card div {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 0.75rem;
+    width: 95%;
+  }
+
+  .dashboard-card-wrapper {
+    gap: 1rem;
+  }
+
+  .dashboard-card {
+    width: 30%; /* 2 cards per row */
+    padding: 1rem;
+  }
+
+  .dashboard-card-icon {
+    font-size: 2rem;
+  }
+
+  .dashboard-card div {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .dashboard-card-wrapper {
+    gap: 0.75rem;
+  }
+
+  .dashboard-card {
+    width: 30%; /* ✅ Ensures 2 cards per row even at 320px */
+    padding: 0.75rem;
+  }
+
+  .dashboard-card-icon {
+    font-size: 1.8rem;
+  }
+
+  .dashboard-card div {
+    font-size: 0.85rem;
+  }
+}
+
+/* Very Small Devices (max-width: 320px) */
+@media (max-width: 320px) {
+  .dashboard-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .dashboard-card-wrapper {
+    gap: 0.5rem;
+  }
+
+  .dashboard-card {
+    width: 30%; /* Still 2 per row */
+    padding: 0.5rem;
+  }
+
+  .dashboard-card-icon {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-card div {
+    font-size: 0.75rem;
+  }
+}

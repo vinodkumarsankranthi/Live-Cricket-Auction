@@ -1,0 +1,297 @@
+.JoinAuctionPreview-container {
+  margin: 2rem auto;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.JoinAuctionPreview-header {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.JoinAuctionPreview-back-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.JoinAuctionPreview-back-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.JoinAuctionPreview-title {
+  font-size: 2rem;
+  color: #004e92;
+  font-weight: bold;
+  margin: 0;
+}
+
+.JoinAuctionPreview-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0;
+  flex-wrap: row;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.JoinAuctionPreview-search-bar label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #002855;
+  white-space: nowrap;
+}
+
+.JoinAuctionPreview-search-bar input {
+  padding: 10px 12px;
+  font-size: 16px;
+  width: 280px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.JoinAuctionPreview-search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: linear-gradient(to right, #004e92, #000428);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.JoinAuctionPreview-search-bar button:hover {
+  background: linear-gradient(to right, #000428,#004e92);
+}
+
+.JoinAuctionPreview-enter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  width: 90px;
+}
+
+.JoinAuctionPreview-error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.JoinAuctionPreview-auction-card {
+  background-color: #e6ffe6;
+  border: 2px solid green;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.JoinAuctionPreview-auction-card button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.JoinAuctionPreview-auction-card button:hover {
+  background-color: #218838;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.JoinAuctionPreview-auction-card p[style*="color: #ff6600"] {
+  animation: pulse 2s infinite;
+}
+
+.JoinAuctionPreview-logo {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #007BFF;
+}
+
+/*----------------------------responsive----------------------------*/
+
+/* Responsive Styles */
+
+@media (max-width: 1440px) {
+  .JoinAuctionPreview-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .JoinAuctionPreview-search-bar {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .JoinAuctionPreview-container {
+    padding: 1.25rem;
+    width: 92%;
+  }
+
+  .JoinAuctionPreview-search-bar {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .JoinAuctionPreview-search-bar input {
+    width: 100%;
+  }
+
+  .JoinAuctionPreview-enter-bar {
+    width: 30%;
+  }
+
+  .JoinAuctionPreview-search-bar label {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+   .JoinAuctionPreview-container {
+    padding: 0.75rem;
+    width: 92%;
+  }
+
+  .JoinAuctionPreview-container {
+    padding: 1.5rem;
+  }
+
+  .JoinAuctionPreview-title {
+    font-size: 1.75rem;
+  }
+
+  .JoinAuctionPreview-logo {
+    width: 80px;
+    height: 60px;
+  }
+
+  .JoinAuctionPreview-auction-card {
+    padding: 16px;
+  }
+
+  .JoinAuctionPreview-search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 95%;
+    margin-left: 5%;
+    justify-content: center;
+  }
+  .JoinAuctionPreview-search-bar input {
+    flex-direction: column;
+    align-items: stretch;
+    width: 75%;
+  }
+  .JoinAuctionPreview-enter-bar {
+    width: 30%;
+    justify-content: center;
+  }
+  .JoinAuctionPreview-back-button {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+.JoinAuctionPreview-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .JoinAuctionPreview-title {
+    font-size: 1.5rem;
+  }
+
+  .JoinAuctionPreview-search-bar {
+    width: 90%;
+    gap: 10px;
+  }
+
+  .JoinAuctionPreview-search-bar input,
+  .JoinAuctionPreview-search-bar button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .JoinAuctionPreview-auction-card button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .JoinAuctionPreview-back-button {
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    gap: 3px;
+  }
+}
+
+@media (max-width: 320px) {
+  .JoinAuctionPreview-container {
+     padding: 0.5rem;
+    width: 90%;
+  }
+  .JoinAuctionPreview-title {
+    font-size: 1.2rem;
+  }
+
+  .JoinAuctionPreview-search-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .JoinAuctionPreview-search-bar input {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .JoinAuctionPreview-search-bar button {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .JoinAuctionPreview-auction-card {
+    font-size: 14px;
+  }
+
+  .JoinAuctionPreview-auction-card button {
+    width: 100%;
+  }
+    .JoinAuctionPreview-back-button {
+    font-size: 10px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    gap: 2px;
+  }
+}

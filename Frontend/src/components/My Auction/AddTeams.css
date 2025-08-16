@@ -1,0 +1,352 @@
+.AddTeam-container {
+  margin: 2rem auto;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.AddTeam-header {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.AddTeam-back-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.AddTeam-back-btn:hover {
+  color: #ffffff;
+}
+
+.AddTeam-back-btn svg {
+  margin-right: 5px;
+}
+
+.AddTeam-title {
+  font-size: 2rem;
+  color: #004e92;
+  font-weight: bold;
+  margin: 0;
+}
+
+.AddTeam-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.AddTeam-row {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.AddTeam-input-group {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.AddTeam-input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.AddTeam-input-group input,
+.AddTeam-input-group textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+.AddTeam-input-group input:focus,
+.AddTeam-input-group textarea:focus {
+  border-color: #007bff;
+}
+
+.AddTeam-logo-wrapper {
+  max-width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddTeam-logo-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #007BFF;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.AddTeam-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.AddTeam-icon-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.AddTeam-icon-wrap.visible {
+  display: flex;
+}
+
+.AddTeam-icon {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.AddTeam-icon.add {
+  color: blue;
+}
+.AddTeam-icon.add:hover {
+  background-color: blue;
+  color: white;
+  transform: scale(1.1);
+}
+
+.AddTeam-icon.edit {
+  color: green;
+}
+.AddTeam-icon.edit:hover {
+  background-color: green;
+  color: white;
+  transform: scale(1.1);
+}
+
+.AddTeam-icon.delete {
+  color: red;
+}
+.AddTeam-icon.delete:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.1);
+}
+
+.AddTeam-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.AddTeam-submit {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 20%;
+  transition: background-color 0.3s;
+}
+
+.AddTeam-submit:hover {
+  background-color: #0056b3;
+}
+
+.AddTeam-input-group .react-tel-input {
+  width: 100%;
+}
+
+.AddTeam-input-group .react-tel-input .form-control {
+  width: 100% !important;
+  height: 42px !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+  border: 1px solid #ccc !important;
+  padding-left: 48px !important; 
+}
+
+.AddTeam-input-group .react-tel-input .form-control:focus {
+  border-color: #004e92 !important;
+  box-shadow: none !important;
+}
+
+.AddTeam-input-group .react-tel-input .flag-dropdown {
+  border-top-left-radius: 8px!important;
+  border-bottom-left-radius: 8px!important;
+  border: 1px solid #ccc!important;
+  border-right: none!important;
+  background: white!important;
+}
+
+.AddTeam-input-group .react-tel-input .flag-dropdown.open {
+  border-color: #007bff !important;
+}
+
+.AddTeam-input-group .react-tel-input .selected-flag {
+  padding: 0 8px;
+  height: 60%;
+}
+
+.AddTeam-input-group .react-tel-input .flag {
+  margin-top: 2px;
+}
+/*----------------------------------responsive---------------------------*/
+@media (max-width: 1440px) {
+  .AddTeam-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .AddTeam-container {
+    padding: 1.25rem;
+    width: 92%;
+  }
+}
+
+@media (max-width: 768px) {
+  .AddTeam-container {
+    padding: 0.75rem;
+    width: 95%;
+  }
+
+  .AddTeam-title {
+    font-size: 1.3rem;
+  }
+
+  .AddTeam-submit {
+    width: 30%;
+  }
+
+  .AddTeam-back-btn{
+    font-size: 13px;
+    padding: 6px 10px;
+    margin-right: 9px;
+    border-radius: 6px;
+    align-items: center;
+    gap: 3px;
+  }
+  
+  .AddTeam-row {
+   width: 98%;
+  }
+
+  .AddTeam-logo-wrapper {
+  width: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .AddTeam-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .AddTeam-back-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .AddTeam-input-group label {
+    font-size: 13px;
+  }
+
+  .AddTeam-submit {
+    font-size: 10px;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .AddTeam-logo-container {
+    width: 80px;
+    height: 80px;
+  }
+  .AddTeam-logo-wrapper {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .AddTeam-back-btn{
+    font-size: 12px;
+    padding: 4px 7px;
+    margin-right: 6px;
+    border-radius: 4px;
+    align-items: center;
+    gap: 3px;
+  }
+  .AddTeam-back-btn{
+    font-size: 10px;
+    gap: 2px;
+  }
+
+   .AddTeam-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .AddTeam-container{
+    padding: 0.5rem;
+    width: 90%;
+  }
+  .AddTeam-title {
+    font-size: 1.1rem;
+  }
+
+  .AddTeam-input-group label {
+    font-size: 12px;
+  }
+
+  .AddTeam-input-group input,
+  .AddTeam-input-group textarea {
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .AddTeam-submit {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+

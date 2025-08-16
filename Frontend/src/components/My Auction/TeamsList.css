@@ -1,0 +1,358 @@
+.teamslist-container {
+  margin: 2rem auto;
+  padding: 2rem 2rem 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.teamslist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.teamslist-title {
+  margin-top: 30px !important;
+  font-size: 2rem;
+  color: #004e92;
+  font-weight: bold;
+  margin: 0;
+}
+
+.teamslist-back-btn{
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.teamslist-back-btn:hover {
+  color: #ffffff;
+}
+
+
+.teamslist-add-btn {
+  background-color: #007BFF;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid #007BFF;
+  font-size: 15px;
+}
+.teamslist-add-btn:hover {
+  background-color: #f0f0f0;
+  color: #007BFF;
+  border: 2px solid #007BFF;
+}
+
+.teamslist-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  width: 40%;
+}
+.teamslist-select-bar{
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 12px;
+  text-align: center;
+}
+.teamslist-search-bar {
+  border-radius: 10px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.teamslist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.teamslist-card {
+  position: relative;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0ff);
+  border-radius: 14px;
+  box-shadow: 2px 2px 2px 1px #a9a2a2;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.teamslist-logo-wrapper {
+  position: relative;
+  margin-top: 0.4rem;
+}
+
+.teamslist-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #007BFF;
+}
+
+.teamslist-info {
+  padding: 0 1rem;
+  font-size: 0.85rem;
+}
+
+.teamslist-name {
+  color: #007BFF;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.teamslist-description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.teamslist-btn-group {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #dddddd;
+  padding-bottom: 5px;
+}
+
+.teamslist-edit-btn,
+.teamslist-delete-btn {
+  background: #007BFF;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: small;
+  color: white;
+  padding: 5px 10px;
+}
+
+.teamslist-edit-btn:hover {
+  background: #02710f;
+  border-color: #007BFF;
+}
+
+.teamslist-delete-btn:hover {
+  background: #ba1111;
+  border-color: #007BFF;
+}
+
+.teamslist-serial {
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  background: #0acae8d7;
+  color: black;
+  padding: 12px 12px;
+  font-weight: bold;
+  font-size: 14px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 15px;
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  text-align: center;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #004e92; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/*------------------------------------responsive----------------------------------*/
+
+@media (max-width: 1440px) {
+  .teamslist-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .teamslist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .teamslist-container {
+    padding: 1.25rem;
+    width: 92%;
+  }
+ 
+  .teamslist-filter-bar {
+    width: 70%;
+  }
+
+  .teamslist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .teamslist-add-btn {
+    font-size: 14px;
+  }
+}
+
+/* 768px and below (tablets) */
+@media (max-width: 768px) {
+  .teamslist-container {
+   padding: 0.75rem;
+    width: 95%;
+  }
+
+  .teamslist-title {
+    margin-top: 30px;
+    font-size: 1.3rem;
+  }
+
+   .teamslist-filter-bar {
+    width: 80%;
+    gap: 10px;
+  }
+
+  .teamslist-select-bar{
+    width: 40%;
+  }
+  .teamslist-search-bar {
+    width: 60%;
+  }
+
+  .teamslist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .teamslist-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .teamslist-name {
+    font-size: 1rem;
+  }
+
+  .teamslist-info {
+    font-size: 0.8rem;
+  }
+  .teamslist-back-btn,
+  .teamslist-add-btn{
+    font-size: 13px;
+    padding: 6px 10px;
+    margin-right: 9px;
+    border-radius: 6px;
+    align-items: center;
+    gap: 4px;
+  }
+   .teamslist-header {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamslist-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .teamslist-title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+   .teamslist-header {
+    align-items: center;
+  }
+
+   .teamslist-filter-bar {
+    width: 80%;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .teamslist-select-bar{
+    width: 50%;
+  }
+  .teamslist-search-bar {
+    width: 80%;
+  }
+
+  .teamslist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamslist-serial {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .teamslist-back-btn,
+  .teamslist-add-btn{
+    font-size: 12px;
+    padding: 4px 7px;
+    margin-right: 6px;
+    border-radius: 4px;
+    align-items: center;
+    gap: 3px;
+  }
+
+   .teamslist-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .teamslist-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+  .teamslist-title {
+    font-size: 0.8rem;
+  }
+   .teamslist-header {
+    align-items: center;
+  }
+
+  .teamslist-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .teamslist-back-btn,
+  .teamslist-add-btn{
+    font-size: 10px;
+  }
+
+  .teamslist-select-bar,
+  .teamslist-search-bar {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .teamslist-card {
+    padding: 0.5rem;
+  }
+}

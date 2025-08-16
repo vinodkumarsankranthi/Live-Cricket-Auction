@@ -1,0 +1,48 @@
+.my-custom-container-class {
+    /* border: 2px solid #ccc; */
+    /* border-radius: 10px; */
+    z-index: 10000;
+    
+}
+
+.my-custom-title-class {
+    color: #333;
+    font-weight: bold !important;
+    font-size: 20px;
+    z-index: 10000;
+}
+
+.my-custom-content-class {
+    color: #555;
+    font-weight: bold !important;
+    z-index: 10000;
+}
+
+.my-custom-button-class {
+    background-color: rgb(7, 93, 7);
+    color: #fff;
+    font-size: medium;
+    z-index: 10000;
+}
+
+
+.swal2-icon {
+    font-size: 9px;     
+    font-weight: bold;
+}
+
+.swal2-html-container{
+    font-weight: bold !important;
+    color:#000000 !important;
+}
+
+.swal2-success-ring{
+    border:2px solid green !important;
+}
+
+.swal2-success-line-long {
+    background-color: green !important;
+}
+.swal2-success-line-tip{
+    background-color: green !important;
+}

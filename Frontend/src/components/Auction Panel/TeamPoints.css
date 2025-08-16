@@ -1,0 +1,202 @@
+.teampoints-container {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+}
+.teampoints-header-container {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.teampoints-body-container {
+  gap: 1.5rem;
+  justify-content: center;
+  padding-top: 20px;
+}
+.teampoints-info-text{
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+.back-button-teampoints {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+}
+
+.back-button-teampoints:hover {
+  color: #ffffff;
+}
+
+.dback-button-teampoints svg {
+  margin-right: 5px;
+}
+
+.teampoints-teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+.teampoints-team-card {
+  background: #2e2e2e;
+  color: white;
+  border-radius: 12px;
+  padding: 0px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 2px 2px 2px 1px #a9a2a2;
+}
+
+.teampoints-team-card:hover {
+  transform: scale(1.02);
+  background: linear-gradient(145deg, #e0f7fa, #ffffff);
+  border-color: #007BFF;
+  box-shadow: 2px 2px 2px 1px #ffffff;background: #3b3b3b;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.teampoints-team-card:hover {
+  animation: pulse 1s;
+}
+
+.teampoints-team-name {
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #00eaff;
+  margin-top: 0%;
+  background: transparent;
+  border: 3px solid orange;
+  border-radius: 50px 0px 50px 0px;
+  align-items: center;
+}
+
+.teampoints-points-row-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 0px;
+  flex-wrap: wrap;
+}
+
+.teampoints-points-row {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  font-size: 20px;
+}
+
+.teampoints-points-row-bold {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+}
+/*---------------------------------responsive--------------------------------*/
+@media (min-width: 1440px) {
+  .teampoints-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .teampoints-container {
+    padding: 1.25rem;
+    width: 92%;
+  }
+}
+
+@media (max-width: 768px) {
+  .teampoints-container {
+    padding: 0.75rem;
+    width: 95%;
+  }
+
+  .teampoints-teams-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teampoints-team-name {
+    font-size: 24px;
+  }
+   .teampoints-points-row,
+  .teampoints-points-row-bold {
+    font-size: 15px;
+  }
+  .teampoints-info-text{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teampoints-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .teampoints-team-name {
+    font-size: 20px;
+  }
+
+  .teampoints-points-row,
+  .teampoints-points-row-bold {
+    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  .teampoints-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .teampoints-team-name {
+    font-size: 18px;
+  }
+
+  .teampoints-points-row,
+  .teampoints-points-row-bold,
+  .teampoints-points-row-group {
+    font-size: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+

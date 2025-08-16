@@ -1,0 +1,248 @@
+.AuctionPlayerPreview-container {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+}
+
+.AuctionPlayerPreview-header-container {
+  position: relative;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.AuctionPlayerPreview-back-button {
+  background-color: #f0f0f0;
+  border: 2px solid #007BFF;
+  color: #007BFF;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.AuctionPlayerPreview-back-button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.AuctionPlayerPreview-dashboard-title {
+  font-size: 2rem;
+  color: #004e92;
+  font-weight: bold;
+  margin: 0;
+}
+
+.AuctionPlayerPreview-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  width: 40%;
+}
+
+.AuctionPlayerPreview-select-bar {
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.AuctionPlayerPreview-search-bar {
+  border-radius: 10px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.AuctionPlayerPreview-player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.AuctionPlayerPreview-player-card {
+  position: relative;
+  background: linear-gradient(145deg, #e0f7fa, #ffffff);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 1px #a9a2a2;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.AuctionPlayerPreview-player-index {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background: #0acae8d7;
+  color: black;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.AuctionPlayerPreview-player-left-column {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 120px;
+    height: 120px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.AuctionPlayerPreview-player-image {
+   width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #007BFF;
+}
+
+.AuctionPlayerPreview-player-info {
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.AuctionPlayerPreview-player-name {
+  background-color: #0acae8d7;
+  color: #000000;
+  font-size: 15px;
+  padding: 5px 5px;
+  margin-bottom: 8px;
+  width: 97%;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+}
+
+.AuctionPlayerPreview-player-attribute {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.AuctionPlayerPreview-player-attribute p {
+  margin: 0;
+  font-weight: 500;
+  color: #555555;
+}
+
+.AuctionPlayerPreview-player-base {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+.AuctionPlayerPreview-stamp-sold{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 85px;
+  width: 100px;
+  transform: rotate(-20deg) scale(0);
+  animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+  pointer-events: none;
+  z-index: 5;
+}
+.AuctionPlayerPreview-stamp-unsold {
+    position: absolute;
+  bottom: 0px;
+  right: 1px;
+  height: 90px;
+  width: 90px;
+  transform: rotate(-20deg) scale(0);
+  animation: stampShot 0.6s forwards cubic-bezier(0.25, 1.5, 0.5, 1);
+  pointer-events: none;
+  z-index: 5;
+}
+
+
+
+.AuctionPlayerPreview-no-players-text {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+/*-------------------------responsive------------------------*/
+@media (min-width: 1440px) {
+  .AuctionPlayerPreview-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .AuctionPlayerPreview-container {
+    padding: 1.25rem;
+    width: 92%;
+  }
+}
+@media (max-width: 768px) {
+  .AuctionPlayerPreview-container {
+    padding: 0.75rem;
+    width: 95%;
+  }
+  .AuctionPlayerPreview-back-button {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+  }
+  .AuctionPlayerPreview-dashboard-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+    .AuctionPlayerPreview-container {
+    padding: 0.5rem;
+    width: 90%;
+  }
+    .AuctionPlayerPreview-dashboard-title {
+    font-size: 1.2rem;
+  }
+  .AuctionPlayerPreview-player-image{
+    width: 80px;
+    height: 80px;
+  }
+
+  .AuctionPlayerPreview-back-button{
+    font-size: 10px;
+    padding: 5px 8px;
+    border-radius: 5px;
+  }
+
+  .AuctionPlayerPreview-player-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .AuctionPlayerPreview-player-card {
+    gap: 12px;
+  }
+
+  .AuctionPlayerPreview-player-left-column {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AuctionPlayerPreview-player-attribute {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+    .AuctionPlayerPreview-container {
+    padding: 0.5rem;
+    width: 85%;
+  }
+}
