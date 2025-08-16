@@ -54,7 +54,8 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <img src="/websitelogo.png" alt="Logo" className="logo-image" />
+        {/* <img src="/websitelogo.png" alt="Logo" className="logo-image" /> */}
+        <img src={process.env.PUBLIC_URL + "/websitelogo.png"} alt="Logo" className="logo-image"/>
       </div>
 
       <div className="nav-right" ref={navRightRef}>
@@ -84,13 +85,7 @@ const Header = () => {
             )}
           </div>
         )}
-
-        <img
-          src="/mobileview.png"
-          alt="Menu"
-          className="mobile-menu-icon"
-          onClick={() => setShowMobileMenu(prev => !prev)}
-        />
+          <img src={process.env.PUBLIC_URL + "/mobileview.png"} alt="Logo" className="mobile-menu-icon" onClick={() => setShowMobileMenu(prev => !prev)}/>
       </div>
 
       {showMobileMenu && (
