@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Live-Cricket-Auction/static/css/main.0ecfd967.css",
+    "main.js": "/Live-Cricket-Auction/static/js/main.1b446880.js",
+    "index.html": "/Live-Cricket-Auction/index.html",
+    "main.0ecfd967.css.map": "/Live-Cricket-Auction/static/css/main.0ecfd967.css.map",
+    "main.1b446880.js.map": "/Live-Cricket-Auction/static/js/main.1b446880.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ecfd967.css",
+    "static/js/main.1b446880.js"
+  ]
+}
